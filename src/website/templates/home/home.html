@@ -1,3 +1,44 @@
 {% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
+    <div
+            class="bg-image"
+            style="
+                    background-image: url('{% static 'img/background.jpg' %}');
+                    height: 100vh;
+                    ">
+        <header>
+            <div class="bg-transparent">
+                <ul class="nav nav-pills nav-fill ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'products' %}">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Log out</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="col-md-10 ms-5 text-start">
+            <h2 class="mt-5  text-white">WELCOME TO OUR SITE</h2>
+    <p class="mt-5  text-white ">
+        for getting better experienc please signup first,<br>
+        The best and variety products you can find just in this<br>
+        for getting better experienc please signup first,<br>
+        The best and variety products you can find just in this<br>
+        for getting better experienc please signup first,<br>
+        The best and variety products you can find just in this<br>
+    </p>
+            <a class="btn mt-4  btn-outline-primary   text-white" href="{% url 'products' %}">Get Started</a>
+        </div>
+
+
+    </div>
 {% endblock %}

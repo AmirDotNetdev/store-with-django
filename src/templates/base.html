@@ -1,14 +1,23 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="{% static 'css/bootstrap' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap-grid.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap-reboot.css' %}">
+
 </head>
 <body>
+<header>
+    {% url '' slug=slug as the_url %}
+    {% if request.path == the_url %}
+    {% include 'header.html' %}
+    {% endif %}
+</header>
 {% block content %}
 {% endblock %}
-<script href="{% static 'js/bootstrap' %}"></script>
+<script href="{% static 'js/bootstrap/bootstrap.js' %}"></script>
 </body>
 </html>
