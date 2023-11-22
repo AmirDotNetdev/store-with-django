@@ -3831,7 +3831,7 @@ textarea.form-control-lg {
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
   font-size: var(--bs-nav-link-font-size);
   font-weight: var(--bs-nav-link-font-weight);
-  color: white !important;
+  color: cornflowerblue !important;
   text-decoration: none;
   background: none;
   border: 0;

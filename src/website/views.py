@@ -5,7 +5,9 @@ def home(request):
     return render(request,'home/home.html',)
 
 def products(request):
-    return render(request,'product/product.html')
+    products = Product.objects.all()
+    context={'products':products}
+    return render(request,'products/products.html',context)
 
 def logout(request):
     logout(request)
